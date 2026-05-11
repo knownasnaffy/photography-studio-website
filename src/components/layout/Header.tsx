@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <nav className="fixed w-full z-50 top-0 left-0 border-b thin-border bg-background/80 backdrop-blur-md transition-shutter">
-      <div className="max-w-7xl mx-auto px-6 min-h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img src="/logo-dark.png" alt="Lucky Photography Logo" className="h-10 w-auto object-contain" />
         </Link>
@@ -55,7 +55,7 @@ export function Header() {
         id="mobile-navigation-menu"
         className={`md:hidden grid transition-shutter ${isMenuOpen ? 'grid-rows-[1fr] opacity-100 translate-y-0' : 'grid-rows-[0fr] opacity-0 -translate-y-2'}`}
       >
-        <div className="overflow-hidden px-6 pb-6 flex flex-col items-start gap-5 font-label-sm uppercase tracking-widest">
+        <nav aria-label="Mobile" className="overflow-hidden px-6 pb-6 flex flex-col items-start gap-5 font-label-sm uppercase tracking-widest">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -68,7 +68,7 @@ export function Header() {
           <Button asLink to="/contact" variant="primary" className="px-6 py-3">
             Book a session
           </Button>
-        </div>
+        </nav>
       </div>
     </nav>
   );
