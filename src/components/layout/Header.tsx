@@ -57,7 +57,7 @@ export function Header() {
       >
         <nav
           aria-label="Mobile navigation"
-          className={`overflow-hidden px-6 flex flex-col items-start gap-5 font-label-sm uppercase tracking-widest ${isMenuOpen ? 'pb-6' : ''}`}
+          className={`overflow-hidden px-6 flex flex-col items-start gap-5 font-label-sm uppercase tracking-widest transition-all duration-300 ${isMenuOpen ? 'py-6' : ''}`}
         >
           {navLinks.map((link) => (
             <Link
