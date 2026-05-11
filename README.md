@@ -16,46 +16,33 @@ It includes a cinematic landing page, gallery and project pages, contact flow, a
 ### 1) Install dependencies
 
 ```bash
-npm install
+npm install # or bun install or whatever your package manager is
 ```
 
-### 2) Configure environment variables
-
-Copy the example file and set your values:
+### 2) Run locally
 
 ```bash
-cp .env.example .env.local
-```
-
-At minimum, set:
-
-- `GEMINI_API_KEY`
-- `APP_URL`
-
-### 3) Run locally
-
-```bash
-npm run dev
+npm run dev # or bun run dev
 ```
 
 The app runs on `http://localhost:3000` (configured via the `dev` script).
 
-### 4) Optional: run in a preconfigured Podman container
+### 3) Optional: run in a preconfigured Podman container
 
 You can start a safe containerized shell and then run the project commands from inside it.
-The image ships Bun, so you can use either Bun (`bun install`, `bun run dev`) or npm (`npm install`, `npm run dev`) inside the container:
+The image ships Bun, so you can use Bun (`bun install`, `bun run dev`) inside the container without the need to configure or install anything:
 
 ```bash
 podman run -it --rm --network host -v $(pwd):/app:Z -v bun_cache:/root/.bun -w /app oven/bun:latest bash
 ```
 
-Then continue normally (for example `npm install` and `npm run dev`).
+Then continue normally (for example `bun install` and `bun run dev`).
 If your shell does not support `$(pwd)`, replace it with your shell equivalent path expression.
 
-### 5) Build for production
+### 4) Build for production
 
 ```bash
-npm run build
+npm run build # or bun run build
 ```
 
 ## Screenshots
