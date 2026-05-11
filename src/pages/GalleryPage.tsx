@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { FadeIn } from '../components/ui/FadeIn';
-import { categories, portfolioItems } from '../data/portfolio';
+import { portfolioItems } from '../data/portfolio';
 
 export function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState('All');
+
+  const categories = ['All', ...Array.from(new Set(portfolioItems.map((item) => item.category)))];
 
   const filteredItems = activeCategory === 'All'
     ? portfolioItems
