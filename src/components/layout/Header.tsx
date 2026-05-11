@@ -30,9 +30,9 @@ export function Header() {
           aria-controls="mobile-navigation-menu"
           onClick={() => setIsMenuOpen((prev) => !prev)}
         >
-          <span className={`h-0.5 w-6 bg-on-surface transition-shutter ${isMenuOpen ? 'translate-y-2 rotate-45' : ''}`} />
-          <span className={`h-0.5 w-6 bg-on-surface transition-shutter ${isMenuOpen ? 'opacity-0' : ''}`} />
-          <span className={`h-0.5 w-6 bg-on-surface transition-shutter ${isMenuOpen ? '-translate-y-2 -rotate-45' : ''}`} />
+          <span aria-hidden="true" className={`h-0.5 w-6 bg-on-surface transition-shutter ${isMenuOpen ? 'translate-y-2 rotate-45' : ''}`} />
+          <span aria-hidden="true" className={`h-0.5 w-6 bg-on-surface transition-shutter ${isMenuOpen ? 'opacity-0' : ''}`} />
+          <span aria-hidden="true" className={`h-0.5 w-6 bg-on-surface transition-shutter ${isMenuOpen ? '-translate-y-2 -rotate-45' : ''}`} />
         </button>
 
         {/* Desktop Navigation */}
@@ -53,9 +53,9 @@ export function Header() {
       </div>
       <div
         id="mobile-navigation-menu"
-        className={`md:hidden overflow-hidden transition-shutter ${isMenuOpen ? 'max-h-60 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
+        className={`md:hidden grid transition-shutter ${isMenuOpen ? 'grid-rows-[1fr] opacity-100 translate-y-0' : 'grid-rows-[0fr] opacity-0 -translate-y-2'}`}
       >
-        <div className="px-6 pb-6 flex flex-col items-start gap-5 font-label-sm uppercase tracking-widest">
+        <div className="overflow-hidden px-6 pb-6 flex flex-col items-start gap-5 font-label-sm uppercase tracking-widest">
           {navLinks.map((link) => (
             <Link
               key={link.name}
