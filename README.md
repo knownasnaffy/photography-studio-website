@@ -5,7 +5,7 @@ It includes a cinematic landing page, gallery and project pages, contact flow, a
 
 ## Prerequisites
 
-- Node.js 20+ (recommended)
+- Node.js 18+ (20+ recommended)
 - npm 10+ (recommended)
 
 ## Usage Guidelines
@@ -35,7 +35,7 @@ At minimum, set:
 npm run dev
 ```
 
-The app runs on `http://localhost:3000`.
+The app runs on `http://localhost:3000` (configured via the `dev` script).
 
 ### 4) Optional: run in a preconfigured Podman container
 
@@ -47,6 +47,7 @@ podman run -it --rm --network host -v $(pwd):/app:Z -v bun_cache:/root/.bun -w /
 ```
 
 Then continue normally (for example `npm install` and `npm run dev`).
+If your shell does not support `$(pwd)`, replace it with your shell equivalent path expression.
 
 ### 5) Build for production
 
