@@ -55,7 +55,7 @@ export function Header() {
         id="mobile-navigation-menu"
         className={`md:hidden grid transition-shutter ${isMenuOpen ? 'grid-rows-[1fr] opacity-100 translate-y-0' : 'grid-rows-[0fr] opacity-0 -translate-y-2'}`}
       >
-        <nav aria-label="Mobile" className="overflow-hidden px-6 pb-6 flex flex-col items-start gap-5 font-label-sm uppercase tracking-widest">
+        <nav aria-label="Mobile navigation" className="overflow-hidden px-6 pb-6 flex flex-col items-start gap-5 font-label-sm uppercase tracking-widest">
           {navLinks.map((link) => (
             <Link
               key={link.name}
