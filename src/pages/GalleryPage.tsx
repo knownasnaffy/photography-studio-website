@@ -12,6 +12,14 @@ export function GalleryPage() {
   const filteredItems = activeCategory === 'All'
     ? portfolioItems
     : portfolioItems.filter((item) => item.category === activeCategory);
+  const overlayBaseClassName = 'absolute inset-0 flex flex-col transition-opacity duration-500';
+  const overlayMobileClassName = 'items-start justify-end p-6 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100';
+  const overlayDesktopClassName = 'md:items-center md:justify-center md:p-0 md:bg-black/60 md:opacity-0 md:group-hover:opacity-100';
+  const overlayClassName = `${overlayBaseClassName} ${overlayMobileClassName} ${overlayDesktopClassName}`;
+
+  const overlayTitleBaseClassName = 'font-headline-md text-white uppercase transition-transform duration-500 focus-ring';
+  const overlayTitleDesktopClassName = 'md:translate-y-4 md:group-hover:translate-y-0';
+  const overlayTitleClassName = `${overlayTitleBaseClassName} ${overlayTitleDesktopClassName}`;
 
   return (
     <div className="pt-20 px-6 max-w-7xl mx-auto pb-32">
@@ -59,8 +67,8 @@ export function GalleryPage() {
                   alt={item.title}
                   className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 grayscale group-hover:grayscale-0"
                 />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:flex flex-col items-center justify-center">
-                  <h3 className="font-headline-md text-white uppercase translate-y-4 group-hover:translate-y-0 transition-transform duration-500 focus-ring">{item.title}</h3>
+                <div className={overlayClassName}>
+                  <h3 className={overlayTitleClassName}>{item.title}</h3>
                   <p className="font-label-sm text-white/70 uppercase mt-2 tracking-[0.2em]">{item.category}</p>
                 </div>
               </Link>
