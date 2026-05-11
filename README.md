@@ -39,7 +39,8 @@ The app runs on `http://localhost:3000`.
 
 ### 4) Optional: run in a preconfigured Podman container
 
-You can start a safe containerized shell and then run the project commands from inside it:
+You can start a safe containerized shell and then run the project commands from inside it.
+The image ships Bun, but you can still run the same npm workflow (`npm install`, `npm run dev`) inside the container:
 
 ```bash
 podman run -it --rm --network host -v $(pwd):/app:Z -v bun_cache:/root/.bun -w /app oven/bun:latest bash
@@ -59,6 +60,7 @@ npm run build
   <summary>Click to expand screenshots</summary>
 
   <br />
+  Replace these placeholders with your final screenshots when available.
 
   ![Homepage Screenshot Placeholder](docs/screenshots/homepage-placeholder.png)
   ![Gallery Screenshot Placeholder](docs/screenshots/gallery-placeholder.png)
