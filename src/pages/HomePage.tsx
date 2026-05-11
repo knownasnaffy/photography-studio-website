@@ -1,10 +1,57 @@
 import { FadeIn } from '../components/ui/FadeIn';
 import { Button } from '../components/ui/Button';
 import { Camera } from 'lucide-react'
+import { Seo } from '../components/seo/Seo';
 
 export function HomePage() {
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Lucky Photography',
+      url: 'https://www.luckyphotography.com/',
+      description: 'Cinematic wedding, portrait, and editorial photography in Ludhiana and destination locations.',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Lucky Photography',
+      image: 'https://www.luckyphotography.com/logo-dark.png',
+      url: 'https://www.luckyphotography.com/',
+      telephone: '+91 12342 32132',
+      email: 'hello@luckyphotography.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '123 Arts District Blvd.',
+        addressLocality: 'Ludhiana',
+        addressRegion: 'Punjab',
+        postalCode: '1470XX',
+        addressCountry: 'IN',
+      },
+      areaServed: ['Ludhiana', 'Punjab', 'India', 'Worldwide'],
+      description: 'Premium wedding and portrait photography studio known for cinematic storytelling.',
+      sameAs: [
+        'https://www.instagram.com/',
+      ],
+    },
+  ];
+
   return (
-    <div className="w-full">
+    <>
+      <Seo
+        title="Luxury Wedding and Portrait Photography in Ludhiana"
+        description="Lucky Photography captures weddings, portraits, and editorial stories with a cinematic style. Book your session in Ludhiana, Punjab and destination locations."
+        path="/"
+        keywords={[
+          'wedding photographer Ludhiana',
+          'portrait photographer Punjab',
+          'cinematic photography India',
+          'luxury wedding photography',
+          'destination photographer',
+        ]}
+        structuredData={structuredData}
+      />
+      <div className="w-full">
       {/* Hero Section */}
       <section className="relative h-[90vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
         {/* Background Image */}
@@ -130,6 +177,7 @@ export function HomePage() {
           </FadeIn>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
