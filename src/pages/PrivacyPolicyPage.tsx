@@ -13,7 +13,7 @@ export function PrivacyPolicyPage() {
       </FadeIn>
 
       <div className="space-y-12">
-        <FadeIn delay={0.1}>
+        <FadeIn delay={0.05}>
           <section className="space-y-4">
             <h2 className="font-headline-md text-3xl uppercase">Overview</h2>
             <p className="font-body-md text-on-surface/70">
@@ -22,7 +22,7 @@ export function PrivacyPolicyPage() {
           </section>
         </FadeIn>
 
-        <FadeIn delay={0.2}>
+        <FadeIn delay={0.1}>
           <section className="space-y-4">
             <h2 className="font-headline-md text-3xl uppercase">Information We Collect</h2>
             <p className="font-body-md text-on-surface/70">
@@ -31,7 +31,7 @@ export function PrivacyPolicyPage() {
           </section>
         </FadeIn>
 
-        <FadeIn delay={0.3}>
+        <FadeIn delay={0.15}>
           <section className="space-y-4">
             <h2 className="font-headline-md text-3xl uppercase">How We Use Your Information</h2>
             <p className="font-body-md text-on-surface/70">
@@ -40,7 +40,7 @@ export function PrivacyPolicyPage() {
           </section>
         </FadeIn>
 
-        <FadeIn delay={0.4}>
+        <FadeIn delay={0.2}>
           <section className="space-y-4">
             <h2 className="font-headline-md text-3xl uppercase">Data Sharing</h2>
             <p className="font-body-md text-on-surface/70">
@@ -49,7 +49,7 @@ export function PrivacyPolicyPage() {
           </section>
         </FadeIn>
 
-        <FadeIn delay={0.5}>
+        <FadeIn delay={0.25}>
           <section className="space-y-4">
             <h2 className="font-headline-md text-3xl uppercase">Data Retention</h2>
             <p className="font-body-md text-on-surface/70">
@@ -58,7 +58,7 @@ export function PrivacyPolicyPage() {
           </section>
         </FadeIn>
 
-        <FadeIn delay={0.6}>
+        <FadeIn delay={0.3}>
           <section className="space-y-4">
             <h2 className="font-headline-md text-3xl uppercase">Your Choices</h2>
             <p className="font-body-md text-on-surface/70">
