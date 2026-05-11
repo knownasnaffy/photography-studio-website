@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
-    <footer className="border-t thin-border mt-32">
+    <footer className="border-t thin-border">
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
-            <Link to="/" className="font-display text-4xl mb-6 block tracking-widest uppercase">Lucky</Link>
+            <Link to="/" className="mb-6 block">
+              <img src="/logo-dark.png" alt="Lucky Photography Logo" className="h-10 w-auto object-contain" />
+            </Link>
             <p className="font-body-md text-on-surface/60 max-w-sm">
               Capturing the eternal moment through cinematic, narrative-driven photography.
             </p>
@@ -27,7 +29,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-20 pt-8 border-t thin-border text-center font-label-sm text-on-surface/40 uppercase tracking-widest">
+        <div className="mt-20 py-8 border-t thin-border text-center font-label-sm text-on-surface/40 uppercase tracking-widest">
           © {new Date().getFullYear()} Lucky Photography. All Rights Reserved.
         </div>
       </div>

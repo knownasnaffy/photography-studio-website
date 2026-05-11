@@ -1,11 +1,11 @@
 export const categories = ["All", "Editorial", "Wedding", "Portrait", "Commercial"];
 
 export const portfolioItems = [
-  { 
-    id: 1, 
-    title: 'Urban Shadows', 
-    category: 'Editorial', 
-    img: "https://images.unsplash.com/photo-1541444158440-2c70034aeb3c?q=80&w=1964&auto=format&fit=crop",
+  {
+    id: 1,
+    title: 'The Elopement',
+    category: 'Wedding',
+    img: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop",
     description: "A deep dive into the contrast of high-fashion and the brutalist architecture of downtown Los Angeles.",
     client: "Vogue Magazine",
     location: "Los Angeles, CA",
@@ -17,10 +17,10 @@ export const portfolioItems = [
       "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=2000&auto=format&fit=crop"
     ]
   },
-  { 
-    id: 2, 
-    title: 'Golden Hour Vows', 
-    category: 'Wedding', 
+  {
+    id: 2,
+    title: 'Golden Hour Vows',
+    category: 'Wedding',
     img: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop",
     description: "An intimate celebration of love under the setting sun in the vineyards of Tuscany.",
     client: "Sarah & James",
@@ -33,10 +33,10 @@ export const portfolioItems = [
       "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2000&auto=format&fit=crop"
     ]
   },
-  { 
-    id: 3, 
-    title: 'Focus', 
-    category: 'Portrait', 
+  {
+    id: 3,
+    title: 'Focus',
+    category: 'Portrait',
     img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop",
     description: "Exploring the depth of human expression through tight frames and stark monochrome tones.",
     client: "Personal Project",
@@ -50,11 +50,11 @@ export const portfolioItems = [
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2000&auto=format&fit=crop"
     ]
   },
-  { 
-    id: 4, 
-    title: 'Desert Noir', 
-    category: 'Editorial', 
-    img: "https://images.unsplash.com/photo-1506544777-64cfcd3ebf1e?q=80&w=2070&auto=format&fit=crop",
+  {
+    id: 4,
+    title: 'Raw & Real',
+    category: 'Portrait',
+    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop",
     description: "A juxtaposition of flowing silhouettes against the harsh, unforgiving landscape of Joshua Tree.",
     client: "Oasis Label",
     location: "Joshua Tree, CA",
@@ -66,10 +66,10 @@ export const portfolioItems = [
       "https://images.unsplash.com/photo-1541444158440-2c70034aeb3c?q=80&w=2000&auto=format&fit=crop"
     ]
   },
-  { 
-    id: 5, 
-    title: 'Brand Story', 
-    category: 'Commercial', 
+  {
+    id: 5,
+    title: 'Brand Story',
+    category: 'Commercial',
     img: "https://images.unsplash.com/photo-1493612276216-ee3925520721?q=80&w=1964&auto=format&fit=crop",
     description: "Capturing the essence of craftsmanship and dedication for a bespoke furniture maker.",
     client: "Artisan Co.",
@@ -82,10 +82,10 @@ export const portfolioItems = [
       "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?q=80&w=2000&auto=format&fit=crop"
     ]
   },
-  { 
-    id: 6, 
-    title: 'The Reception', 
-    category: 'Wedding', 
+  {
+    id: 6,
+    title: 'The Reception',
+    category: 'Wedding',
     img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop",
     description: "The undirected, raw joy of the after-party. Flash photography highlighting the chaos and love.",
     client: "Elena & David",

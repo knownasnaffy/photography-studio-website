@@ -7,21 +7,22 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asLink?: boolean;
   to?: string;
   className?: string;
+  children?: React.ReactNode
 }
 
-export function Button({ 
-  children, 
-  variant = 'primary', 
-  asLink, 
-  to, 
-  className, 
-  ...props 
+export function Button({
+  children,
+  variant = 'primary',
+  asLink,
+  to,
+  className,
+  ...props
 }: ButtonProps) {
   const baseStyles = "inline-flex items-center justify-center transition-shutter font-label-sm uppercase tracking-widest text-center px-8 py-4";
-  
+
   const variants = {
     primary: "bg-primary-container text-white hover:bg-white hover:text-black red-accent-hover",
-    outline: "border thin-border bg-transparent text-on-surface hover:bg-white hover:text-black",
+    outline: "border bg-transparent text-on-surface hover:bg-white hover:text-black",
     ghost: "text-on-surface hover:text-primary-container text-glow p-0"
   };
 
