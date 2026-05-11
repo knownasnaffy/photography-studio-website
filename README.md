@@ -1,3 +1,6 @@
+<img width="1920" height="1080" alt="Screenshot-20260511-190242" src="https://github.com/user-attachments/assets/214edfc6-c258-4680-9aaa-2491892c73d8" />
+
+
 # Photography Studio Website
 
 A modern photography portfolio and studio website built with React, TypeScript, Vite, and Tailwind CSS.  
@@ -60,11 +63,9 @@ npm run build
 <details>
   <summary>Click to expand screenshots</summary>
 
-  <br />
-  Replace these placeholders with your final screenshots when available.
-
-  ![Homepage Screenshot Placeholder](https://via.placeholder.com/1280x720?text=Homepage+Screenshot+Placeholder)
-  ![Gallery Screenshot Placeholder](https://via.placeholder.com/1280x720?text=Gallery+Screenshot+Placeholder)
-  ![Project Details Screenshot Placeholder](https://via.placeholder.com/1280x720?text=Project+Details+Screenshot+Placeholder)
-
+  <img width="1920" height="4222" alt="Homepage" src="https://github.com/user-attachments/assets/88f4d0d0-318f-4b07-a1fc-76119ab8a37c" />
+  <br/>
+  <img width="1920" height="2048" alt="Gallery" src="https://github.com/user-attachments/assets/dbce4c82-a695-4071-ab7e-35d35bf7d250" />
+  <br/>
+  <img width="1920" height="1364" alt="Contact" src="https://github.com/user-attachments/assets/91d54cbd-ba12-42ca-b045-26570b1e97b1" />
 </details>
