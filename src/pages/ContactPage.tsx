@@ -21,9 +21,15 @@ export function ContactPage() {
                 </a>
               </div>
               <div>
+                <h3 className="font-label-sm text-primary uppercase tracking-[0.2em] mb-2">Mobile</h3>
+                <p className="font-body-md text-on-surface/70">
+                  +91 12342 32132
+                </p>
+              </div>
+              <div>
                 <h3 className="font-label-sm text-primary uppercase tracking-[0.2em] mb-2">Studio</h3>
                 <p className="font-body-md text-on-surface/70">
-                  123 Arts District Blvd.<br/>Los Angeles, CA 90013
+                  123 Arts District Blvd.<br/>Ludhiana, 1470XX
                 </p>
               </div>
             </div>

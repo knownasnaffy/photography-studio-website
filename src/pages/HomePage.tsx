@@ -25,7 +25,7 @@ export function HomePage() {
           </FadeIn>
 
           <FadeIn delay={0.4} direction="up" className="mb-8">
-            <h1 className="font-display-lg text-5xl md:text-[8rem] uppercase leading-[0.9]">
+            <h1 className="font-display sm:font-display-lg text-5xl font-bold sm:text-[8rem] uppercase leading-[1.1]">
               Lucky <br/> Photography
             </h1>
           </FadeIn>
