@@ -57,18 +57,18 @@ export function ProjectPage() {
           url: `https://www.luckyphotography.com/project/${project.id}`,
         }}
       />
-      <div className="pt-20 pb-32">
+      <div className="pb-32">
       {/* Project Hero */}
       <section className="relative h-[60vh] w-full flex flex-col justify-end p-6 md:p-16 border-b thin-border">
         <div className="absolute inset-0 w-full h-full">
-          <img 
-            src={project.img} 
-            alt={project.title} 
+          <img
+            src={project.img}
+            alt={project.title}
             className="w-full h-full object-cover opacity-30 grayscale-[30%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         </div>
-        
+
         <div className="relative z-10 max-w-7xl w-full mx-auto">
           <FadeIn direction="up">
             <Link to="/gallery" className="inline-flex items-center text-primary font-label-sm uppercase tracking-widest hover:text-white transition-colors mb-8">
@@ -79,7 +79,7 @@ export function ProjectPage() {
                 <h1 className="font-display-lg text-5xl md:text-8xl uppercase leading-none mb-4">{project.title}</h1>
                 <p className="font-label-sm uppercase tracking-[0.2em] text-on-surface/60">{project.category}</p>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-x-12 gap-y-4 font-label-sm uppercase tracking-widest text-on-surface/80">
                 <div>
                   <span className="block text-primary/70 mb-1">Client</span>
@@ -112,15 +112,15 @@ export function ProjectPage() {
       <section className="px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {project.images.map((imgSrc, index) => (
-            <FadeIn 
-              key={index} 
-              delay={index * 0.15} 
+            <FadeIn
+              key={index}
+              delay={index * 0.15}
               className={index === 0 || index === project.images.length - 1 ? "md:col-span-2" : ""}
             >
               <div className="border thin-border bg-surface-container overflow-hidden group">
-                <img 
-                  src={imgSrc} 
-                  alt={`${project.title} - Image ${index + 1}`} 
+                <img
+                  src={imgSrc}
+                  alt={`${project.title} - Image ${index + 1}`}
                   className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.02]"
                   style={{ minHeight: index === 0 ? '70vh' : '50vh' }}
                 />
@@ -129,7 +129,7 @@ export function ProjectPage() {
           ))}
         </div>
       </section>
-      
+
       {/* Next Project / CTA */}
       <section className="mt-32 px-6 text-center">
         <FadeIn>
