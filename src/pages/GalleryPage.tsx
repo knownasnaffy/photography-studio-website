@@ -1,0 +1,49 @@
+import { Link } from 'react-router-dom';
+import { FadeIn } from '../components/ui/FadeIn';
+import { categories, portfolioItems } from '../data/portfolio';
+
+export function GalleryPage() {
+  return (
+    <div className="pt-20 px-6 max-w-7xl mx-auto pb-32">
+      <FadeIn>
+        <div className="text-center mb-16">
+          <h1 className="font-display-lg text-5xl md:text-7xl uppercase mb-6">Archive</h1>
+          <p className="font-body-lg text-on-surface/60 max-w-2xl mx-auto">
+            A curated selection of our favorite moments captured on film and digital.
+          </p>
+        </div>
+      </FadeIn>
+
+      <FadeIn delay={0.2}>
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
+          {categories.map((category) => (
+            <button 
+              key={category}
+              className="font-label-sm uppercase tracking-widest px-6 py-2 border thin-border transition-shutter hover:bg-white hover:text-black hover:border-white"
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </FadeIn>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {portfolioItems.map((item, index) => (
+          <FadeIn key={item.id} delay={index * 0.1}>
+            <Link to={`/project/${item.id}`} className="block group relative overflow-hidden bg-surface-container aspect-[4/5] border thin-border">
+              <img 
+                src={item.img} 
+                alt={item.title} 
+                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 grayscale group-hover:grayscale-0"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:flex flex-col items-center justify-center">
+                <h3 className="font-headline-md text-white uppercase translate-y-4 group-hover:translate-y-0 transition-transform duration-500 focus-ring">{item.title}</h3>
+                <p className="font-label-sm text-white/70 uppercase mt-2 tracking-[0.2em]">{item.category}</p>
+              </div>
+            </Link>
+          </FadeIn>
+        ))}
+      </div>
+    </div>
+  );
+}
