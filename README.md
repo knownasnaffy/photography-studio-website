@@ -6,7 +6,7 @@ It includes a cinematic landing page, gallery and project pages, contact flow, a
 ## Prerequisites
 
 - Node.js 18+ (20+ recommended)
-- npm 10+ (recommended)
+- npm 9+ (10+ recommended)
 
 ## Usage Guidelines
 
@@ -40,7 +40,7 @@ The app runs on `http://localhost:3000` (configured via the `dev` script).
 ### 4) Optional: run in a preconfigured Podman container
 
 You can start a safe containerized shell and then run the project commands from inside it.
-The image ships Bun, but you can still run the same npm workflow (`npm install`, `npm run dev`) inside the container:
+The image ships Bun, so you can use either Bun (`bun install`, `bun run dev`) or npm (`npm install`, `npm run dev`) inside the container:
 
 ```bash
 podman run -it --rm --network host -v $(pwd):/app:Z -v bun_cache:/root/.bun -w /app oven/bun:latest bash
