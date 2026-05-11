@@ -63,8 +63,8 @@ npm run build
   <br />
   Replace these placeholders with your final screenshots when available.
 
-  ![Homepage Screenshot Placeholder](docs/screenshots/homepage-placeholder.png)
-  ![Gallery Screenshot Placeholder](docs/screenshots/gallery-placeholder.png)
-  ![Project Details Screenshot Placeholder](docs/screenshots/project-details-placeholder.png)
+  ![Homepage Screenshot Placeholder](https://via.placeholder.com/1280x720?text=Homepage+Screenshot+Placeholder)
+  ![Gallery Screenshot Placeholder](https://via.placeholder.com/1280x720?text=Gallery+Screenshot+Placeholder)
+  ![Project Details Screenshot Placeholder](https://via.placeholder.com/1280x720?text=Project+Details+Screenshot+Placeholder)
 
 </details>
