@@ -24,8 +24,8 @@ export function Footer() {
           <div>
             <h4 className="font-label-sm mb-6 text-on-surface/40 uppercase tracking-widest">Legal</h4>
             <div className="flex flex-col gap-4 font-body-md">
-              <a href="#" className="hover:text-primary-container transition-shutter">Privacy Policy</a>
-              <a href="#" className="hover:text-primary-container transition-shutter">Terms of Service</a>
+              <Link to="/privacy-policy" className="hover:text-primary-container transition-shutter">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-primary-container transition-shutter">Terms of Service</Link>
             </div>
           </div>
         </div>
