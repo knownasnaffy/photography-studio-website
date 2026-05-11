@@ -85,7 +85,7 @@ export function Seo({
   useEffect(() => {
     const normalizedPath = path === '/' ? '' : path;
     const canonicalUrl = `${SITE_URL}${normalizedPath}`;
-    const fullTitle = `${title} | ${SITE_NAME}`;
+    const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
     const imageUrl = toAbsoluteUrl(image);
     const robotsValue = noIndex ? 'noindex, nofollow' : 'index, follow';
 
