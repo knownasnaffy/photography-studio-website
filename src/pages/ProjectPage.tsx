@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { FadeIn } from '../components/ui/FadeIn';
 import { portfolioItems } from '../data/portfolio';
 import { Button } from '../components/ui/Button';
+import { Seo } from '../components/seo/Seo';
 
 export function ProjectPage() {
   const { id } = useParams();
@@ -9,17 +10,54 @@ export function ProjectPage() {
 
   if (!project) {
     return (
-      <div className="pt-32 px-6 max-w-7xl mx-auto pb-32 text-center min-h-[60vh] flex flex-col items-center justify-center">
-        <h1 className="font-display-lg text-4xl uppercase mb-4">Project Not Found</h1>
-        <Button asLink to="/gallery" variant="outline">
-          Back to Archive
-        </Button>
-      </div>
+      <>
+        <Seo
+          title="Project Not Found"
+          description="The portfolio project you are looking for does not exist. Browse all photography projects in the Lucky Photography archive."
+          path="/gallery"
+          noIndex
+        />
+        <div className="pt-32 px-6 max-w-7xl mx-auto pb-32 text-center min-h-[60vh] flex flex-col items-center justify-center">
+          <h1 className="font-display-lg text-4xl uppercase mb-4">Project Not Found</h1>
+          <Button asLink to="/gallery" variant="outline">
+            Back to Archive
+          </Button>
+        </div>
+      </>
     );
   }
 
   return (
-    <div className="pt-20 pb-32">
+    <>
+      <Seo
+        title={`${project.title} | Photography Project`}
+        description={`${project.description} Explore the full ${project.category.toLowerCase()} story from Lucky Photography.`}
+        path={`/project/${project.id}`}
+        image={project.img}
+        type="article"
+        keywords={[
+          `${project.category.toLowerCase()} photography`,
+          `${project.location} photographer`,
+          `${project.client} photography project`,
+          'cinematic photo story',
+        ]}
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'CreativeWork',
+          name: project.title,
+          description: project.description,
+          image: project.images,
+          creator: {
+            '@type': 'Organization',
+            name: 'Lucky Photography',
+            url: 'https://www.luckyphotography.com/',
+          },
+          locationCreated: project.location,
+          datePublished: project.date,
+          url: `https://www.luckyphotography.com/project/${project.id}`,
+        }}
+      />
+      <div className="pt-20 pb-32">
       {/* Project Hero */}
       <section className="relative h-[60vh] w-full flex flex-col justify-end p-6 md:p-16 border-b thin-border">
         <div className="absolute inset-0 w-full h-full">
@@ -101,6 +139,7 @@ export function ProjectPage() {
           </Button>
         </FadeIn>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

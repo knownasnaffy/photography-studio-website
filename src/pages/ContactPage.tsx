@@ -1,10 +1,30 @@
 import { FadeIn } from '../components/ui/FadeIn';
 import { Button } from '../components/ui/Button';
+import { Seo } from '../components/seo/Seo';
 
 export function ContactPage() {
   return (
-    <div className="pt-20 px-6 max-w-7xl mx-auto pb-32">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+    <>
+      <Seo
+        title="Contact Lucky Photography | Book Wedding and Portrait Sessions"
+        description="Get in touch with Lucky Photography to book wedding, portrait, and commercial sessions in Ludhiana, Punjab, and destination locations."
+        path="/contact"
+        keywords={[
+          'book wedding photographer',
+          'contact portrait photographer',
+          'Ludhiana photography studio',
+          'destination photography booking',
+        ]}
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: 'Contact Lucky Photography',
+          url: 'https://www.luckyphotography.com/contact',
+          description: 'Contact page for booking photography sessions with Lucky Photography.',
+        }}
+      />
+      <div className="pt-20 px-6 max-w-7xl mx-auto pb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
 
         <div>
           <FadeIn>
@@ -90,14 +110,15 @@ export function ContactPage() {
                 ></textarea>
               </div>
 
-              <Button type="button" variant="primary" className="w-full mt-4">
+              <Button variant="primary" className="w-full mt-4">
                 Send Inquiry
               </Button>
             </form>
           </FadeIn>
         </div>
 
+        </div>
       </div>
-    </div>
+    </>
   );
 }
